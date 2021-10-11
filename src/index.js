@@ -1,5 +1,6 @@
 const dotenv = require('dotenv') ;
 const {Client , MessageAttachment , MessageEmbed } = require('discord.js') ;
+const express = require('express') ;
 
 //helper functions
 const getVirtual = require('./getVirtual') ;
@@ -8,7 +9,11 @@ const graph = require('./graph') ;
 
 dotenv.config() ;
 
-const client = new Client() ;
+const server = express() ; 
+const port = process.env.PORT ; 
+server.listen(port , ()=>{
+    console.log(`server listening on port ${port}`) ;
+    const client = new Client() ;
 
 client.login(process.env.DISCORD_BOT_TOKEN) ; 
 
@@ -74,5 +79,8 @@ client.on('message', async (message) => {
         }
     }
 })
+
+}) ;
+
 
 
