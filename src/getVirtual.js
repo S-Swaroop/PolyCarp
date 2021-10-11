@@ -5,7 +5,10 @@ const getVirtual = ([Div , ...handles]) => {
     let n = Div[Div.length - 1] ;
     let div = `Div ${n}` ;
     contest = (async () => {
-        const browser = await puppeteer.launch({headless: true}) ;
+        const browser = await puppeteer.launch({
+            headless: true ,
+            args: ["--no-sandbox"]
+        });
         const page = await browser.newPage() ;  
         await page.goto('https://cfvs.github.io/') ;
         await page.waitForSelector('#handleInp') ;

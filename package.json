@@ -18,7 +18,8 @@
     "discord.js": "^12.5.3",
     "dotenv": "^10.0.0",
     "node-fetch": "^2.6.1",
-    "puppeteer": "^10.1.0"
+    "puppeteer": "^10.1.0",
+    "puppeteer-core": "^10.4.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.12"
