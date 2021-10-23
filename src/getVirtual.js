@@ -17,6 +17,7 @@ const getVirtual = ([Div , ...handles]) => {
             let inputField = await page.$('#handleInp') ;
             await inputField.type(handle) ;
             await page.click('button.ui.button') ;
+            await page.waitForSelector('#handleTable td') ;
             await inputField.click({clickCount : 3}) ;
             await inputField.press('Backspace') ;
         } ;
