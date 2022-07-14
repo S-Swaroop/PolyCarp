@@ -1,0 +1,25 @@
+{
+  "name": "polycarp",
+  "version": "2.0.1",
+  "description": "A discord bot for interacting with CodeForces through discord",
+  "main": "index.ts",
+  "scripts": {
+    "start": "ts-node index.ts",
+    "dev": "nodemon index.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sharan Swaroop",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.25.0",
+    "consola": "^2.15.3",
+    "discord.js": "^13.6.0",
+    "dotenv": "^15.0.0",
+    "mongoose": "^6.2.3",
+    "puppeteer": "^13.4.0",
+    "ts-node": "^10.5.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
